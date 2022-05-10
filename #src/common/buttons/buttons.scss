@@ -1,0 +1,85 @@
+.btn {
+    display: inline-flex;
+    min-width: 15.5rem;
+    min-height: 5.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 2rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: $secondColor;
+    border-radius: 0.8rem;
+    font-size: 2rem;
+    line-height: 1em;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+
+    &:hover {
+        
+        background: #DFC7B2;
+        color: #fff !important;
+    }
+
+    & img , & svg {
+        flex: 0 0 auto;
+        height: 3.2rem;
+        width: auto;
+        margin-right: 1rem;
+    }
+
+    &--primary {
+    }
+
+    &--secondary {
+        
+        background-color: $mainColor;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background: #32c4e2;
+            }
+        }
+    }
+
+    &--with-arrow {
+        &:after {
+            font-family: $fontAwesome;
+            font-weight: 700;
+            content: "\f054";
+            font-size: 0.8em;
+            margin-left: 0.8em;
+            transition: all 0.3s ease;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                &:after {
+                    transform: translateX(0.4em);
+                }
+            }
+        }
+    }
+}
+
+.close-btn {
+    text-align: center;
+    display: inline-block;
+    &__icon {
+        width: 25px;
+        height: auto;
+        margin-bottom: 4px;
+        display: inline-block;
+        & svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.2em;
+    }
+}

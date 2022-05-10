@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "JDA"
+})
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    @@include('common/header/_header.html',{
+    "mod": ""
+    })
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page" data-padding-top-header-size>
+        @@include('common/hero/_hero.html', {
+        "title": "ADMISSIONS"
+        })
+        <div class="padding-wrap">
+            <div class="container">
+                <div class="text-block">
+                    <h3 class="text-block__title text-center">ADMISSIONS</h3>
+                    <div class="text-block__text text-block__text--secondary text-content text-center">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacus dolor, congue in
+                            rutrum ac, convallis sagittis turpis. Donec mi nisi, malesuada ut laoreet in, aliquet ut
+                            lectus.
+                        </p>
+                    </div>
+                    <section class="cta">
+                        <ul class="cta__list">
+                            <li>
+                                <div class="cta__card">
+                                    <div class="cta__card-front">
+                                        <div class="cta__card-icon">
+                                            <img src="img/photo/cta-icon-1.svg" alt="">
+                                        </div>
+                                        <div class="cta__card-title">Contact Us</div>
+                                    </div>
+                                    <div class="cta__card-back" data-truncate-string="100">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita quia sapiente
+                                        natus ut vero voluptatum, porro sunt doloribus sed. Aliquid voluptatibus beatae
+                                        ipsam ducimus. Nihil, quaerat. Quidem, repellat? Laborum, aperiam.
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cta__card">
+                                    <div class="cta__card-front">
+                                        <div class="cta__card-icon">
+                                            <img src="img/photo/cta-icon-2.svg" alt="">
+                                        </div>
+                                        <div class="cta__card-title">Free Consultation</div>
+                                    </div>
+                                    <div class="cta__card-back" data-truncate-string="100">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita quia sapiente
+                                        natus ut vero voluptatum, porro sunt doloribus sed. Aliquid voluptatibus beatae
+                                        ipsam ducimus. Nihil, quaerat. Quidem, repellat? Laborum, aperiam.
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cta__card">
+                                    <div class="cta__card-front">
+                                        <div class="cta__card-icon">
+                                            <img src="img/photo/cta-icon-3.svg" alt="">
+                                        </div>
+                                        <div class="cta__card-title">Receive data</div>
+                                    </div>
+                                    <div class="cta__card-back" data-truncate-string="100">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita quia sapiente
+                                        natus ut vero voluptatum, porro sunt doloribus sed. Aliquid voluptatibus beatae
+                                        ipsam ducimus. Nihil, quaerat. Quidem, repellat? Laborum, aperiam.
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <div class="text-block__text text-content text-center mt-5">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo erat eget dolor
+                            euismod,
+                            nec aliquet tortor auctor. Sed posuere ipsum in ipsum suscipit, malesuada faucibus nulla
+                            tristique. Nulla convallis ac arcu eget aliquam. Class aptent taciti sociosqu ad litora
+                            torquent
+                            per conubia nostra, per inceptos himenaeos. In id massa ac diam molestie suscipit id.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="padding-wrap">
+            <div class="container">
+                <div class="contact">
+                    <div class="contact__item">
+                        <div class="contact__item-title">
+                            <img src="img/icons/address-marker.svg" alt="">
+                            <div>
+                                our <strong>address</strong>
+                            </div>
+                        </div>
+                        <div class="contact__item-text">
+                            1241 Gulf of Mexico Dr, <br> Longboat Key, FL 34228
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <div class="contact__item-title">
+                            <img src="img/icons/address-phone.svg" alt="">
+                            <div>
+                                our <strong>phone</strong>
+                            </div>
+                        </div>
+                        <div class="contact__item-text">
+                            <a href="tel:2122392105">(212) 239-2105</a>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <div class="contact__item-title">
+                            <img src="img/icons/address-email.svg" alt="">
+                            <div>
+                                our <strong>address</strong>
+                            </div>
+                        </div>
+                        <div class="contact__item-text">
+                            <a href="mailto:info@guerrillaeconomics.com">info@guerrillaeconomics.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="padding-wrap">
+            <div class="map" id="map"></div>
+
+            <script>
+
+                var isMap = document.getElementById("map");
+                if (isMap) {
+                    var map;
+
+
+                    function initMap() {
+
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            center: { lat: 40.68950, lng: -74.044683 },
+                            zoom: 16,
+                            //styles: 
+                        });
+
+                        var marker = new google.maps.Marker({
+                            position: { lat: 40.68950, lng: -74.044683 },
+                            map: map,
+                            title: '',
+                            label: '',
+                            // icon: 'img/contact/googlMarker.svg',
+                        });
+
+                    }
+                }
+
+            </script>
+        </div>
+
+
+        @@include('common/bottom-form/_bottom-form.html', {
+        "title": "how we can help?"
+        })
+
+
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    @@include('common/footer/_footer.html',{})
+    <!-- == // FOOTER ================== -->
+    @@include('common/popup/_popup-economic.html',{})
+    @@include('common/cookies-message/_cookies-message.html',{})
+
+
+    @@include('_js-bottom.html',{})
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+        defer></script>
+</body>
+
+</html>
