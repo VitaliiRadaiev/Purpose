@@ -50,9 +50,10 @@
         @media (max-width: $md3+px) {
             display: flex;
             flex-direction: column;
-            padding-top: 87px;
+            padding-top: 45px;
             padding-bottom: 45px;
-            min-height: calc(100vh - 111px - 74px);
+            min-height: calc(100vh - 171px - 74px);
+            justify-content: flex-end;
         }
     }
 

@@ -5,8 +5,20 @@ let mobileMenuCloseBtn = document.querySelector('[data-action="close-mobile-menu
 let mobileNav = document.querySelector('[data-mobile-nav]');
 
 if (header) {
+    let isScroll = window.pageYOffset;
+    
     window.addEventListener('scroll', () => {
         header.classList.toggle('header--is-scroll', window.pageYOffset > 50);
+
+        if(window.pageYOffset > 50) {
+            if(window.pageYOffset > isScroll) {
+                header.classList.add('header--hide');
+            } else if(window.pageYOffset < isScroll) {
+                header.classList.remove('header--hide');
+            }
+        }
+
+        isScroll = window.pageYOffset;
     })
 }
 
